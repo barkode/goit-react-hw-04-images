@@ -20,7 +20,9 @@ export const App = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    if (!searchRequest) return;
+    if (!searchRequest) {
+      return;
+    }
 
     const fetchGalleryItems = (query, page) => {
       setLoading(true);
@@ -89,7 +91,7 @@ export const App = () => {
     <AppContainer>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={1500}
         hideProgressBar={true}
         newestOnTop={false}
         closeOnClick={true}
