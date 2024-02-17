@@ -17,15 +17,6 @@ export const Modal = ({ largeImageURL, alt, onCloseModal }) => {
     };
   }, [onCloseModal]);
 
-  // useEffect(() => {
-  //   const handleKeydown = e => {
-  //     if (e.code === 'Escape') {
-  //       onCloseModal();
-  //     }
-  //   };
-  //   return () => window.removeEventListener('keydown', handleKeydown);
-  // }, [onCloseModal]);
-
   const handleBackdropClick = ({ target, currentTarget }) => {
     if (currentTarget === target) {
       onCloseModal();
